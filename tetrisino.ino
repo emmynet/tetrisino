@@ -427,7 +427,7 @@ void drawScoreLayout() {
                TFT_MAX_WIDTH - (PLAYFIELD_X_OFFSET + (CELLS_WIDE - 1) * CELL_SIZE) ,TFT_MAX_HEIGHT, RED);
   // Next layout
   char next[6] = "Next\0";
-  tft.drawString(13 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 5 , next , RED );
+  tft.drawString(13 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 5 , next , WHITE );
 
   if (m_gameover) {
     char game[6] = "GAME\0";
@@ -439,21 +439,21 @@ void drawScoreLayout() {
 
   // Line layout
   char lines[7] = "Lines\0";
-  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 80 , lines , RED );
+  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 80 , lines , WHITE );
   sprintf(lines, "%5d", m_linesCleaned);
-  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 90 , lines , RED );
+  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 90 , lines , WHITE );
 
   // Level layout
   char level[8] = "Level\0";
-  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 105 , level , RED );
+  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 105 , level , WHITE );
   sprintf(level, "%5d", m_currentLevel );
-  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 115 , level , RED );
+  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 115 , level , WHITE );
 
   // Goal layout
   char goal[8] = "Goal\0";
-  tft.drawString(15 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 130 , goal , RED );
+  tft.drawString(15 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 130 , goal , WHITE );
   sprintf(goal, "%5d", m_levelGoal - m_currentLevelLines );
-  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 140 , goal , RED );
+  tft.drawString(9 + PLAYFIELD_X_OFFSET + CELLS_WIDE * CELL_SIZE, 140 , goal , WHITE );
 
 }
 
